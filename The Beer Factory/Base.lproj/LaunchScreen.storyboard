@@ -17,16 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen" translatesAutoresizingMaskIntoConstraints="NO" id="CD7-eU-40q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Beer Factory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-eN-m1J">
-                                <rect key="frame" x="121.5" y="323" width="132" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="71" y="113" width="233" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EuA-eN-m1J" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XHx-iZ-kLO"/>
+                            <constraint firstItem="CD7-eU-40q" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="MoH-0U-UO4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CD7-eU-40q" secondAttribute="trailing" id="WgT-TW-deR"/>
+                            <constraint firstItem="EuA-eN-m1J" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.4" id="XHx-iZ-kLO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CD7-eU-40q" secondAttribute="bottom" id="i29-Ax-JDh"/>
+                            <constraint firstItem="CD7-eU-40q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sBt-BH-ObY"/>
                             <constraint firstItem="EuA-eN-m1J" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="szV-u6-SVZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -37,4 +44,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash_screen" width="614.4000244140625" height="384"/>
+    </resources>
 </document>
