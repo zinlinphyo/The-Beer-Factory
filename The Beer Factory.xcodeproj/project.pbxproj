@@ -13,6 +13,11 @@
 		114EACB7219F21FA00BE734E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114EACB6219F21FA00BE734E /* Assets.xcassets */; };
 		114EACBA219F21FA00BE734E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114EACB8219F21FA00BE734E /* LaunchScreen.storyboard */; };
 		114EACC2219F313400BE734E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EACC1219F313400BE734E /* MainTableViewController.swift */; };
+		114EACC5219F326E00BE734E /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EACC3219F326E00BE734E /* MainTableViewCell.swift */; };
+		114EACC6219F326E00BE734E /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114EACC4219F326E00BE734E /* MainTableViewCell.xib */; };
+		114EACC8219F366E00BE734E /* DataAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EACC7219F366E00BE734E /* DataAgent.swift */; };
+		114EACCB219F405C00BE734E /* BeerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EACCA219F405C00BE734E /* BeerVO.swift */; };
+		D589A43BC39D60F59E41ED9E /* Pods_The_Beer_Factory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B2E37172D6392C969CE069 /* Pods_The_Beer_Factory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		114EACB9219F21FA00BE734E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114EACBB219F21FA00BE734E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114EACC1219F313400BE734E /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		114EACC3219F326E00BE734E /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		114EACC4219F326E00BE734E /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		114EACC7219F366E00BE734E /* DataAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAgent.swift; sourceTree = "<group>"; };
+		114EACCA219F405C00BE734E /* BeerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerVO.swift; sourceTree = "<group>"; };
+		27EDC542CBD83EEF3DAB4CC7 /* Pods-The Beer Factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Beer Factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Beer Factory/Pods-The Beer Factory.debug.xcconfig"; sourceTree = "<group>"; };
+		C9B2E37172D6392C969CE069 /* Pods_The_Beer_Factory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Beer_Factory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11B1716852DA57D8E590134 /* Pods-The Beer Factory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Beer Factory.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Beer Factory/Pods-The Beer Factory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D589A43BC39D60F59E41ED9E /* Pods_The_Beer_Factory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				114EACAE219F21F600BE734E /* The Beer Factory */,
 				114EACAD219F21F600BE734E /* Products */,
+				4C9729CAA646354ABA4668DB /* Pods */,
+				7DE17B587561DF8A33CB213E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +78,29 @@
 				114EACB8219F21FA00BE734E /* LaunchScreen.storyboard */,
 				114EACBB219F21FA00BE734E /* Info.plist */,
 				114EACC1219F313400BE734E /* MainTableViewController.swift */,
+				114EACC3219F326E00BE734E /* MainTableViewCell.swift */,
+				114EACC4219F326E00BE734E /* MainTableViewCell.xib */,
+				114EACC7219F366E00BE734E /* DataAgent.swift */,
+				114EACCA219F405C00BE734E /* BeerVO.swift */,
 			);
 			path = "The Beer Factory";
+			sourceTree = "<group>";
+		};
+		4C9729CAA646354ABA4668DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27EDC542CBD83EEF3DAB4CC7 /* Pods-The Beer Factory.debug.xcconfig */,
+				E11B1716852DA57D8E590134 /* Pods-The Beer Factory.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DE17B587561DF8A33CB213E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9B2E37172D6392C969CE069 /* Pods_The_Beer_Factory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 114EACBE219F21FA00BE734E /* Build configuration list for PBXNativeTarget "The Beer Factory" */;
 			buildPhases = (
+				F5A5B9BE3585402E666C7D06 /* [CP] Check Pods Manifest.lock */,
 				114EACA8219F21F600BE734E /* Sources */,
 				114EACA9219F21F600BE734E /* Frameworks */,
 				114EACAA219F21F600BE734E /* Resources */,
+				E6EB7E6F04BA981442AC8010 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,19 +165,74 @@
 			files = (
 				114EACBA219F21FA00BE734E /* LaunchScreen.storyboard in Resources */,
 				114EACB7219F21FA00BE734E /* Assets.xcassets in Resources */,
+				114EACC6219F326E00BE734E /* MainTableViewCell.xib in Resources */,
 				114EACB5219F21F600BE734E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E6EB7E6F04BA981442AC8010 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-The Beer Factory/Pods-The Beer Factory-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The Beer Factory/Pods-The Beer Factory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5A5B9BE3585402E666C7D06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Beer Factory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		114EACA8219F21F600BE734E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114EACCB219F405C00BE734E /* BeerVO.swift in Sources */,
 				114EACB2219F21F600BE734E /* ViewController.swift in Sources */,
+				114EACC8219F366E00BE734E /* DataAgent.swift in Sources */,
 				114EACC2219F313400BE734E /* MainTableViewController.swift in Sources */,
+				114EACC5219F326E00BE734E /* MainTableViewCell.swift in Sources */,
 				114EACB0219F21F600BE734E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,10 +377,11 @@
 		};
 		114EACBF219F21FA00BE734E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27EDC542CBD83EEF3DAB4CC7 /* Pods-The Beer Factory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48LBJ9FZ5F;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "The Beer Factory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,10 +396,11 @@
 		};
 		114EACC0219F21FA00BE734E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E11B1716852DA57D8E590134 /* Pods-The Beer Factory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48LBJ9FZ5F;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "The Beer Factory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
