@@ -15,6 +15,9 @@
 		114EACCB219F405C00BE734E /* BeerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EACCA219F405C00BE734E /* BeerVO.swift */; };
 		114EACD3219FC17E00BE734E /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EACD2219FC17E00BE734E /* BeerCollectionViewCell.swift */; };
 		114EACD8219FC36300BE734E /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EACD7219FC36300BE734E /* BeerViewController.swift */; };
+		11DD614421A8F9F100D605E0 /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD614321A8F9F100D605E0 /* BeerModel.swift */; };
+		11DD614721A8FA0900D605E0 /* Beer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11DD614521A8FA0900D605E0 /* Beer.xcdatamodeld */; };
+		11DE810B21A14A9600C5B115 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DE810A21A14A9600C5B115 /* DetailViewController.swift */; };
 		D589A43BC39D60F59E41ED9E /* Pods_The_Beer_Factory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B2E37172D6392C969CE069 /* Pods_The_Beer_Factory.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		114EACCA219F405C00BE734E /* BeerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerVO.swift; sourceTree = "<group>"; };
 		114EACD2219FC17E00BE734E /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		114EACD7219FC36300BE734E /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		11DD614321A8F9F100D605E0 /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
+		11DD614621A8FA0900D605E0 /* Beer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beer.xcdatamodel; sourceTree = "<group>"; };
+		11DE810A21A14A9600C5B115 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		27EDC542CBD83EEF3DAB4CC7 /* Pods-The Beer Factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Beer Factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Beer Factory/Pods-The Beer Factory.debug.xcconfig"; sourceTree = "<group>"; };
 		C9B2E37172D6392C969CE069 /* Pods_The_Beer_Factory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Beer_Factory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11B1716852DA57D8E590134 /* Pods-The Beer Factory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Beer Factory.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Beer Factory/Pods-The Beer Factory.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,13 +73,14 @@
 		114EACAE219F21F600BE734E /* The Beer Factory */ = {
 			isa = PBXGroup;
 			children = (
+				11DD614221A8F9BD00D605E0 /* Model */,
 				114EACD6219FC1DA00BE734E /* Storyboard */,
 				114EACD5219FC19500BE734E /* Data */,
 				114EACD4219FC18B00BE734E /* View */,
 				114EACAF219F21F600BE734E /* AppDelegate.swift */,
 				114EACB6219F21FA00BE734E /* Assets.xcassets */,
-				114EACB8219F21FA00BE734E /* LaunchScreen.storyboard */,
 				114EACBB219F21FA00BE734E /* Info.plist */,
+				11DD614521A8FA0900D605E0 /* Beer.xcdatamodeld */,
 			);
 			path = "The Beer Factory";
 			sourceTree = "<group>";
@@ -83,6 +90,7 @@
 			children = (
 				114EACD2219FC17E00BE734E /* BeerCollectionViewCell.swift */,
 				114EACD7219FC36300BE734E /* BeerViewController.swift */,
+				11DE810A21A14A9600C5B115 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,8 +108,17 @@
 			isa = PBXGroup;
 			children = (
 				114EACB3219F21F600BE734E /* Main.storyboard */,
+				114EACB8219F21FA00BE734E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		11DD614221A8F9BD00D605E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11DD614321A8F9F100D605E0 /* BeerModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4C9729CAA646354ABA4668DB /* Pods */ = {
@@ -200,6 +217,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-The Beer Factory/Pods-The Beer Factory-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -208,6 +226,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -248,8 +267,11 @@
 				114EACCB219F405C00BE734E /* BeerVO.swift in Sources */,
 				114EACD3219FC17E00BE734E /* BeerCollectionViewCell.swift in Sources */,
 				114EACD8219FC36300BE734E /* BeerViewController.swift in Sources */,
+				11DE810B21A14A9600C5B115 /* DetailViewController.swift in Sources */,
 				114EACC8219F366E00BE734E /* DataAgent.swift in Sources */,
 				114EACB0219F21F600BE734E /* AppDelegate.swift in Sources */,
+				11DD614421A8F9F100D605E0 /* BeerModel.swift in Sources */,
+				11DD614721A8FA0900D605E0 /* Beer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 48LBJ9FZ5F;
 				INFOPLIST_FILE = "The Beer Factory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,7 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 48LBJ9FZ5F;
 				INFOPLIST_FILE = "The Beer Factory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,6 +473,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11DD614521A8FA0900D605E0 /* Beer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11DD614621A8FA0900D605E0 /* Beer.xcdatamodel */,
+			);
+			currentVersion = 11DD614621A8FA0900D605E0 /* Beer.xcdatamodel */;
+			path = Beer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 114EACA4219F21F600BE734E /* Project object */;
 }

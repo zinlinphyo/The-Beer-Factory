@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
+import CoreData
 
 class BeerViewController: UIViewController {
 
@@ -20,15 +22,22 @@ class BeerViewController: UIViewController {
         beerCollectionView.dataSource = self
         beerCollectionView.delegate = self
         
-        DataAgent.shared().getBeers(successCallback: callbackSuccessGetBeers)
+        registerForPreviewing(with: self, sourceView: beerCollectionView)
+        
+        self.beerList = BeerModel.shared().getBeerList()
+        
+        if self.beerList.isEmpty {
+            DataAgent.shared().getBeers(successCallback: callbackSuccessGetBeers)
+        } else {
+            self.beerCollectionView.reloadData()
+        }
     }
     
     func callbackSuccessGetBeers(beerList : [BeerVO]) {
-        
-        self.beerList = beerList
+        BeerModel.shared().saveBeerData(beerList: beerList)
+        self.beerList = BeerModel.shared().getBeerList()
         self.beerCollectionView.reloadData()
     }
-    
 
     /*
     // MARK: - Navigation
@@ -57,10 +66,36 @@ extension BeerViewController : UICollectionViewDataSource {
         
         return UICollectionViewCell()
     }
-    
-    
 }
 
 extension BeerViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selected ==> \(indexPath.row)")
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        
+        if let vc = vc {
+            vc.beerData = beerList[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            print("Error launching view controller.")
+        }
+    }
+}
+
+extension BeerViewController : UIViewControllerPreviewingDelegate {
     
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = beerCollectionView.indexPathForItem(at: location), let cell = beerCollectionView.cellForItem(at: indexPath) else { return nil }
+        
+        guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return nil }
+        vc.beerData = beerList[indexPath.row]
+        
+        previewingContext.sourceRect = cell.contentView.frame
+        return vc
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }
 }
