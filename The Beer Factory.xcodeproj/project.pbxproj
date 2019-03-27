@@ -17,6 +17,10 @@
 		114EACD8219FC36300BE734E /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EACD7219FC36300BE734E /* BeerViewController.swift */; };
 		11DD614421A8F9F100D605E0 /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD614321A8F9F100D605E0 /* BeerModel.swift */; };
 		11DD614721A8FA0900D605E0 /* Beer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11DD614521A8FA0900D605E0 /* Beer.xcdatamodeld */; };
+		11DD615021A91BD300D605E0 /* IngredientVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD614F21A91BD300D605E0 /* IngredientVO.swift */; };
+		11DD615221A91C2900D605E0 /* MaltVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD615121A91C2900D605E0 /* MaltVO.swift */; };
+		11DD615421A91C8400D605E0 /* AmountVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD615321A91C8400D605E0 /* AmountVO.swift */; };
+		11DD615621A91CD800D605E0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD615521A91CD800D605E0 /* Enums.swift */; };
 		11DE810B21A14A9600C5B115 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DE810A21A14A9600C5B115 /* DetailViewController.swift */; };
 		D589A43BC39D60F59E41ED9E /* Pods_The_Beer_Factory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B2E37172D6392C969CE069 /* Pods_The_Beer_Factory.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +38,10 @@
 		114EACD7219FC36300BE734E /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		11DD614321A8F9F100D605E0 /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
 		11DD614621A8FA0900D605E0 /* Beer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beer.xcdatamodel; sourceTree = "<group>"; };
+		11DD614F21A91BD300D605E0 /* IngredientVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientVO.swift; sourceTree = "<group>"; };
+		11DD615121A91C2900D605E0 /* MaltVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaltVO.swift; sourceTree = "<group>"; };
+		11DD615321A91C8400D605E0 /* AmountVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVO.swift; sourceTree = "<group>"; };
+		11DD615521A91CD800D605E0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		11DE810A21A14A9600C5B115 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		27EDC542CBD83EEF3DAB4CC7 /* Pods-The Beer Factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Beer Factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Beer Factory/Pods-The Beer Factory.debug.xcconfig"; sourceTree = "<group>"; };
 		C9B2E37172D6392C969CE069 /* Pods_The_Beer_Factory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Beer_Factory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +84,7 @@
 				11DD614221A8F9BD00D605E0 /* Model */,
 				114EACD6219FC1DA00BE734E /* Storyboard */,
 				114EACD5219FC19500BE734E /* Data */,
+				11DD614E21A91A0F00D605E0 /* Network */,
 				114EACD4219FC18B00BE734E /* View */,
 				114EACAF219F21F600BE734E /* AppDelegate.swift */,
 				114EACB6219F21FA00BE734E /* Assets.xcassets */,
@@ -88,9 +97,8 @@
 		114EACD4219FC18B00BE734E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				114EACD2219FC17E00BE734E /* BeerCollectionViewCell.swift */,
-				114EACD7219FC36300BE734E /* BeerViewController.swift */,
-				11DE810A21A14A9600C5B115 /* DetailViewController.swift */,
+				11DD614C21A919E100D605E0 /* Cell */,
+				11DD614D21A919F200D605E0 /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,7 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				114EACCA219F405C00BE734E /* BeerVO.swift */,
-				114EACC7219F366E00BE734E /* DataAgent.swift */,
+				11DD614F21A91BD300D605E0 /* IngredientVO.swift */,
+				11DD615121A91C2900D605E0 /* MaltVO.swift */,
+				11DD615321A91C8400D605E0 /* AmountVO.swift */,
+				11DD615521A91CD800D605E0 /* Enums.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -119,6 +130,31 @@
 				11DD614321A8F9F100D605E0 /* BeerModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11DD614C21A919E100D605E0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				114EACD2219FC17E00BE734E /* BeerCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		11DD614D21A919F200D605E0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				114EACD7219FC36300BE734E /* BeerViewController.swift */,
+				11DE810A21A14A9600C5B115 /* DetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		11DD614E21A91A0F00D605E0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				114EACC7219F366E00BE734E /* DataAgent.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		4C9729CAA646354ABA4668DB /* Pods */ = {
@@ -264,13 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DD615221A91C2900D605E0 /* MaltVO.swift in Sources */,
 				114EACCB219F405C00BE734E /* BeerVO.swift in Sources */,
 				114EACD3219FC17E00BE734E /* BeerCollectionViewCell.swift in Sources */,
 				114EACD8219FC36300BE734E /* BeerViewController.swift in Sources */,
+				11DD615421A91C8400D605E0 /* AmountVO.swift in Sources */,
 				11DE810B21A14A9600C5B115 /* DetailViewController.swift in Sources */,
 				114EACC8219F366E00BE734E /* DataAgent.swift in Sources */,
 				114EACB0219F21F600BE734E /* AppDelegate.swift in Sources */,
 				11DD614421A8F9F100D605E0 /* BeerModel.swift in Sources */,
+				11DD615021A91BD300D605E0 /* IngredientVO.swift in Sources */,
+				11DD615621A91CD800D605E0 /* Enums.swift in Sources */,
 				11DD614721A8FA0900D605E0 /* Beer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

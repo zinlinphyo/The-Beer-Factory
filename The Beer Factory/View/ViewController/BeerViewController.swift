@@ -25,11 +25,12 @@ class BeerViewController: UIViewController {
         registerForPreviewing(with: self, sourceView: beerCollectionView)
         
         self.beerList = BeerModel.shared().getBeerList()
-        
+        self.beerCollectionView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         if self.beerList.isEmpty {
             DataAgent.shared().getBeers(successCallback: callbackSuccessGetBeers)
-        } else {
-            self.beerCollectionView.reloadData()
         }
     }
     

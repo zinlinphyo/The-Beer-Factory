@@ -35,6 +35,8 @@ class DetailViewController: UIViewController {
         
         lblName.text = data.name
         ivHeroImage.sd_setImage(with: URL(string: data.imageUrl ?? ""), placeholderImage: UIImage(named: "image_placeholder"))
+        
+        print("Ingredient ==> \(String(describing: data.ingredient))")
     }
     
 

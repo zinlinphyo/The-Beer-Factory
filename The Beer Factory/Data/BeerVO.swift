@@ -19,6 +19,8 @@ class BeerVO {
     
     var tagline : String? = nil
     
+    var ingredient : IngredientVO? = nil
+    
     static func parseToBeerVO(_ data: JSON) -> BeerVO {
         
         let beer = BeerVO()
@@ -26,6 +28,7 @@ class BeerVO {
         beer.name = data["name"].string
         beer.imageUrl = data["image_url"].string
         beer.tagline = data["tagline"].string
+        beer.ingredient = IngredientVO.parseToIngredientVO(data["ingredients"])
         
         return beer
     }

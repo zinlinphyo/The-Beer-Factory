@@ -55,7 +55,7 @@ class BeerModel {
             self.beers = try managedObjectContext.fetch(Beer.fetchRequest()) as! [Beer]
             
             self.beers.forEach { (data) in
-                var beer = BeerVO()
+                let beer = BeerVO()
                 beer.id = Int(data.id)
                 beer.name = data.name
                 beer.imageUrl = data.image

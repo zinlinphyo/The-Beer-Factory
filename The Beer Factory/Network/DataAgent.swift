@@ -45,7 +45,11 @@ class DataAgent {
                         var beerList : [BeerVO] = []
                         
                         result.forEach({ (beer) in
-                            beerList.append(BeerVO.parseToBeerVO(beer))
+                            let beerVO = BeerVO.parseToBeerVO(beer)
+                            
+                            if let _ = beerVO.id {
+                                beerList.append(BeerVO.parseToBeerVO(beer))
+                            }
                         })
                         
                         successCallback(beerList)
